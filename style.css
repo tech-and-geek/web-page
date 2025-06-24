@@ -1,0 +1,720 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #13171b;
+  --secondary-color: #221203;
+  --success-color: #198754;
+  --warning-color: #f4b400;
+  --danger-color: #dc3545;
+  --light-color: #f9f9f9;
+  --dark-color: #000000;
+  --electric-blue: #00d4ff;
+  --electric-yellow: #ffff00;
+  --electric-purple: #8a2be2;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Logo Styles */
+.logo-container {
+  position: relative;
+  display: inline-block;
+}
+
+.rotating-logo {
+  transition: all 0.3s ease;
+}
+
+.power-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--electric-blue);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.7;
+}
+
+/* Text Effects */
+.electric-text {
+  background: linear-gradient(45deg, var(--primary-color), var(--electric-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.electric-title {
+  position: relative;
+  display: inline-block;
+}
+
+.electric-letter {
+  display: inline-block;
+}
+
+/* Navigation */
+.electric-nav {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.electric-nav::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--electric-blue), var(--electric-yellow));
+  transition: width 0.3s ease;
+}
+
+.electric-nav:hover::before {
+  width: 100%;
+}
+
+.electric-nav:hover {
+  color: var(--electric-blue) !important;
+  text-shadow: 0 0 5px var(--electric-blue);
+}
+
+/* Hero Section */
+.hero-section-photo {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+   url('vender.jpg'); /* replace with your actual image path */
+  background-size: cover;
+  background-position: center;
+  min-height: 50vh;
+  position: relative;
+  padding: 4rem 0;
+}
+
+.hero-section-photo h1,
+.hero-section-photo p {
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Buttons */
+.electric-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.electric-btn:hover {
+  box-shadow: 0 0 15px var(--electric-blue);
+  border-color: var(--electric-blue);
+  transform: translateY(-2px);
+}
+
+/* Cards */
+.electric-card {
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  overflow: hidden;
+}
+
+.electric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.2);
+  border-color: var(--electric-blue);
+}
+
+/* Icons */
+.electric-glow {
+  transition: all 0.3s ease;
+}
+
+.electric-pulse {
+  transition: all 0.3s ease;
+}
+
+.electric-glow:hover {
+  color: var(--electric-blue);
+  text-shadow: 0 0 10px var(--electric-blue);
+}
+
+/* Gallery */
+.electric-gallery {
+  position: relative;
+  overflow: hidden;
+}
+
+.electric-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid var(--electric-blue);
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.electric-gallery:hover .electric-border {
+  opacity: 1;
+}
+
+/* Stats Section */
+.electric-current-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 212, 255, 0.1) 0%,
+    rgba(138, 43, 226, 0.1) 50%,
+    rgba(255, 255, 0, 0.1) 100%
+  );
+}
+
+.electric-counter {
+  text-shadow: 0 0 10px var(--electric-blue);
+}
+
+.electric-underline {
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90px, var(--electric-blue), var(--electric-yellow));
+  margin: 10px auto;
+}
+
+/* Forms */
+.electric-form-card {
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(45deg, var(--electric-blue), var(--electric-purple)) border-box;
+}
+
+.electric-input {
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.electric-input:focus {
+  border-color: var(--electric-blue);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  outline: none;
+}
+
+/* Footer */
+.electric-footer-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(0, 212, 255, 0.05) 0%, rgba(138, 43, 226, 0.05) 100%);
+}
+
+.electric-hr {
+  border-color: var(--electric-blue);
+  box-shadow: 0 0 10px var(--electric-blue);
+}
+
+/* WhatsApp */
+.electric-whatsapp {
+  position: relative;
+}
+
+.electric-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  border: 2px solid var(--electric-blue);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.7;
+}
+
+/* Hover Effects */
+.electric-hover {
+  transition: all 0.3s ease;
+}
+
+.electric-hover:hover {
+  color: var(--electric-blue) !important;
+  text-shadow: 0 0 10px var(--electric-blue);
+  transform: scale(1.05);
+}
+
+/* Utility Classes */
+.z-index-2 {
+  z-index: 2;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+  .electric-title {
+    font-size: 1.5rem;
+  }
+
+  .electric-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .power-ring {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-section-photo h1 {
+    font-size: 2rem;
+  }
+
+  .electric-letter {
+    font-size: 1.8rem;
+  }
+}
+
+/* Original styles preserved */
+.logo-img {
+  max-height: 50px;
+  width: auto;
+}
+
+.logo-img-small {
+  max-height: 60px;
+  width: auto;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.service-card,
+.why-choose-card {
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.service-icon,
+.why-choose-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 4 / 3;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.gallery-card:hover .gallery-overlay {
+  bottom: 0;
+}
+
+.gallery-preview-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 16 / 9;
+}
+
+.gallery-preview-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.gallery-preview-card:hover img {
+  transform: scale(1.05);
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+}
+
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25d366;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-size: 26px;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.footer-logo {
+  filter: brightness(0) invert(1);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Footer Logo */
+.logo-container-footer {
+  position: relative;
+  display: inline-block;
+}
+
+.rotating-logo-footer {
+  transition: all 0.3s ease;
+}
+
+.power-ring-footer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--electric-blue);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+/* Additional Electric Effects for New Pages */
+.electric-header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(0, 212, 255, 0.1), rgba(138, 43, 226, 0.1));
+}
+
+.electric-input-icon {
+  background: linear-gradient(45deg, var(--primary-color), var(--electric-blue));
+  border-color: var(--electric-blue);
+  color: white;
+}
+
+.electric-list-item {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.electric-list-item:hover {
+  background: rgba(0, 212, 255, 0.05);
+  border-color: var(--electric-blue);
+  transform: translateX(5px);
+}
+
+/* Electric Profile Image */
+.founder-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.electric-profile {
+  transition: all 0.3s ease;
+}
+
+.electric-profile-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 220px;
+  height: 220px;
+  border: 2px solid var(--electric-blue);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+}
+
+/* Electric Images */
+.electric-image {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.electric-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(0, 212, 255, 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.electric-image:hover .electric-image-overlay {
+  opacity: 1;
+}
+
+/* Electric Team Images */
+.team-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.electric-team-image {
+  transition: all 0.3s ease;
+}
+
+.electric-team-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(0, 212, 255, 0.1), rgba(138, 43, 226, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-image-container:hover .electric-team-overlay {
+  opacity: 1;
+}
+
+.team-image-container:hover .electric-team-image {
+  transform: scale(1.05);
+}
+
+/* Electric Map */
+.electric-map {
+  position: relative;
+}
+
+.electric-map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--electric-blue);
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.electric-map:hover .electric-map-overlay {
+  opacity: 1;
+}
+
+/* Login Page Specific */
+.login-logo-container {
+  position: relative;
+  display: inline-block;
+}
+
+.power-ring-login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--electric-blue);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+/* Search Results */
+.search-result-card {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.search-result-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.2);
+}
+
+/* Vendor Registration Form */
+.form-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(45deg, var(--electric-blue), var(--electric-purple)) border-box;
+}
+
+/* Electric Subtitle */
+.electric-subtitle {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive Electric Effects */
+@media (max-width: 767.98px) {
+  .electric-profile-ring {
+    width: 180px;
+    height: 180px;
+  }
+
+  .power-ring-login {
+    width: 80px;
+    height: 80px;
+  }
+
+  .electric-letter {
+    font-size: 1.2rem;
+  }
+}
+/* Improve container spacing and layout for mobile */
+@media (max-width: 767.98px) {
+  .container,
+  .container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-section-photo {
+    padding: 2rem 0;
+    min-height: 40vh;
+  }
+
+  .electric-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .electric-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .electric-profile-ring {
+    width: 140px;
+    height: 140px;
+  }
+
+  .power-ring {
+    width: 40px;
+    height: 40px;
+  }
+
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .electric-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* For very small devices (phones) */
+@media (max-width: 575.98px) {
+  .hero-section-photo h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section-photo p {
+    font-size: 1rem;
+  }
+
+  .electric-letter {
+    font-size: 1rem;
+  }
+
+  .electric-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .gallery-card,
+  .gallery-preview-card {
+    aspect-ratio: 1 / 1;
+  }
+
+  .service-icon,
+  .why-choose-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .form-container {
+    padding: 1rem;
+  }
+}
