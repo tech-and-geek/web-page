@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shukla Enterprises - Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Electrical Circuit Background Animation -->
+    <div class="electrical-bg">
+        <div class="circuit-line circuit-1"></div>
+        <div class="circuit-line circuit-2"></div>
+        <div class="circuit-line circuit-3"></div>
+        <div class="circuit-node node-1"></div>
+        <div class="circuit-node node-2"></div>
+        <div class="circuit-node node-3"></div>
+        <div class="electrical-spark spark-1"></div>
+        <div class="electrical-spark spark-2"></div>
+    </div>
+
+    <!-- Header -->
+    <div class="bg-white shadow-sm">
+        <div class="container py-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="text-primary text-decoration-none d-flex align-items-center electric-hover">
+                    <i class="fas fa-arrow-left me-2 electric-glow"></i>
+                    Back to Home
+                </a>
+                <div class="justify-content-between">
+                    <div class="logo-container">
+                        <img src="logo.png" alt="Shukla Enterprises Logo" class="logo-img-small rotating-logo">
+                        <div class="power-ring"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Hero Section -->
+    <section class="gallery-hero bg-primary text-white py-5 position-relative">
+        <div class="lightning-container">
+            <div class="lightning lightning-1"></div>
+            <div class="lightning lightning-2"></div>
+            <div class="lightning lightning-3"></div>
+        </div>
+        <div class="electric-current-bg"></div>
+        <div class="container text-center position-relative z-index-2">
+            <h1 class="display-4 fw-bold mb-3 electric-title">
+                <span class="electric-letter">P</span>
+                <span class="electric-letter">h</span>
+                <span class="electric-letter">o</span>
+                <span class="electric-letter">t</span>
+                <span class="electric-letter">o</span>
+                <span class="ms-3 electric-letter">G</span>
+                <span class="electric-letter">a</span>
+                <span class="electric-letter">l</span>
+                <span class="electric-letter">l</span>
+                <span class="electric-letter">e</span>
+                <span class="electric-letter">r</span>
+                <span class="electric-letter">y</span>
+            </h1>
+            <p class="lead electric-subtitle">Explore our projects, equipment, and achievements</p>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-white electric-hover">Home</a></li>
+                    <li class="breadcrumb-item active text-white-50" aria-current="page">Photo Gallery</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <div class="container py-5">
+        <!-- Gallery Filters -->
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-4 electric-title">Project Gallery</h2>
+            <div class="gallery-filters">
+                <button class="btn btn-primary active electric-btn" data-filter="all">ALL</button>
+                <button class="btn btn-outline-primary electric-btn" data-filter="machines">MACHINES</button>
+                <button class="btn btn-outline-primary electric-btn" data-filter="plants">PLANTS</button>
+                <button class="btn btn-outline-primary electric-btn" data-filter="projects">PROJECTS</button>
+                <button class="btn btn-outline-primary electric-btn" data-filter="meetings">MEETINGS</button>
+                <button class="btn btn-outline-primary electric-btn" data-filter="roads">ROADS</button>
+                <button class="btn btn-outline-primary electric-btn" data-filter="quarries">QUARRIES</button>
+            </div>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="row g-4" id="galleryGrid">
+            <!-- Machines -->
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="machines">
+                <div class="gallery-card electric-gallery">
+                    <img src="Bitumen Sprayer.jpg" alt="Bitumen Sprayer" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h5>Bitumen Sprayer</h5>
+                        <p>Heavy duty bitumen spraying equipment</p>
+                        <button class="btn btn-light btn-sm electric-btn"
+                            onclick="openLightbox('/placeholder.svg?height=600&width=800', 'Bitumen Sprayer')">
+                            <i class="fas fa-expand-alt electric-glow"></i> View
+                        </button>
+                    </div>
+                    <div class="electric-border"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="machines">
+                <div class="gallery-card electric-gallery">
+                    <img src="Excavator.jpg" alt="Excavator" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h5>Excavator</h5>
+                        <p>Heavy excavation machinery</p>
+                        <button class="btn btn-light btn-sm electric-btn"
+                            onclick="openLightbox('/placeholder.svg?height=600&width=800', 'Excavator')">
+                            <i class="fas fa-expand-alt electric-glow"></i> View
+                        </button>
+                    </div>
+                    <div class="electric-border"></div>
+                </div>
+            </div>
+
+            <!-- Plants -->
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="plants">
+                <div class="gallery-card electric-gallery">
+                    <img src="crusher.jpg" alt="Crusher Plant" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h5>Crusher Plant</h5>
+                        <p>Stone crushing and processing facility</p>
+                        <button class="btn btn-light btn-sm electric-btn"
+                            onclick="openLightbox('/placeholder.svg?height=600&width=800', 'Crusher Plant')">
+                            <i class="fas fa-expand-alt electric-glow"></i> View
+                        </button>
+                    </div>
+                    <div class="electric-border"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="plants">
+                <div class="gallery-card electric-gallery">
+                    <img src="batching plant.jpg" alt="Batching Plant" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h5>Batching Plant</h5>
+                        <p>Concrete batching and mixing facility</p>
+                        <button class="btn btn-light btn-sm electric-btn"
+                            onclick="openLightbox('/placeholder.svg?height=600&width=800', 'Batching Plant')">
+                            <i class="fas fa-expand-alt electric-glow"></i> View
+                        </button>
+                    </div>
+                    <div class="electric-border"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="plants">
+                <div class="gallery-card electric-gallery">
+                    <img src="Hot Mix Plant.jpg" alt="Hot Mix Plant" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h5>Hot Mix Plant</h5>
+                        <p>Asphalt hot mix production facility</p>
+                        <button class="btn btn-light btn-sm electric-btn"
+                            onclick="openLightbox('/placeholder.svg?height=600&width=800', 'Hot Mix Plant')">
+                            <i class="fas fa-expand-alt electric-glow"></i> View
+                        </button>
+                    </div>
+                    <div class="electric-border"></div>
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="projects">
+                <div class="gallery-card electric-gallery">
+                    <img src="Electrical Infrastructure.webp" alt="Electrical Infrastructure" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h5>Electrical Infrastructure</h5>
+                        <p>Major electrical construction project</p>
+                        <button class="btn btn-light btn-sm electric-btn"
+                            onclick="openLightbox('/placeholder.svg?height=600&width=800', 'Electrical Infrastructure')">
+                            <i class="fas fa-expand-alt electric-glow"></i> View
+                        </button>
+                    </div>
+                    <div class="electric-border"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="projects">
+                <div class="gallery-card electric-gallery">
+                    <img src="Power Distribution.jpg" alt="Power Distribution" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h5>Power Distribution</h5>
+                        <p>Power distribution system installation</p>
+                        <button class="btn btn-light btn-sm electric-btn"
+                            onclick="openLightbox('/placeholder.svg?height=600&width=800', 'Power Distribution')">
+                            <i class="fas fa-expand-alt electric-glow"></i> View
+                        </button>
+                    </div>
+                    <div class="electric-border"></div>
+                </div>
+            </div>
+
+            <!-- Roads -->
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="roads">
+                <div class="gallery-card electric-gallery">
+                    <img src="Road Construction.webp" alt="Road Construction" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h5>Road Construction</h5>
+                        <p>Highway and road development projects</p>
+                        <button class="btn btn-light btn-sm electric-btn"
+                            onclick="openLightbox('/placeholder.svg?height=600&width=800', 'Road Construction')">
+                            <i class="fas fa-expand-alt electric-glow"></i> View
+                        </button>
+                    </div>
+                    <div class="electric-border"></div>
+                </div>
+            </div>
+
+            <!-- Quarries -->
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="quarries">
+                <div class="gallery-card electric-gallery">
+                    <img src="Quarry Operations.jpg" alt="Quarry Operations" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h5>Quarry Operations</h5>
+                        <p>Stone quarry and extraction operations</p>
+                        <button class="btn btn-light btn-sm electric-btn"
+                            onclick="openLightbox('/placeholder.svg?height=600&width=800', 'Quarry Operations')">
+                            <i class="fas fa-expand-alt electric-glow"></i> View
+                        </button>
+                    </div>
+                    <div class="electric-border"></div>
+                </div>
+            </div>
+
+            <!-- Meetings -->
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="meetings">
+                <div class="gallery-card electric-gallery">
+                    <img src="Executive Meeting.webp" alt="Executive Meeting" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h5>Executive Meeting</h5>
+                        <p>Meeting with project stakeholders</p>
+                        <button class="btn btn-light btn-sm electric-btn"
+                            onclick="openLightbox('/placeholder.svg?height=600&width=800', 'Executive Meeting')">
+                            <i class="fas fa-expand-alt electric-glow"></i> View
+                        </button>
+                    </div>
+                    <div class="electric-border"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="meetings">
+                <div class="gallery-card electric-gallery">
+                    <img src="Site Inspection.png" alt="Site Inspection" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h5>Site Inspection</h5>
+                        <p>Project site inspection and review</p>
+                        <button class="btn btn-light btn-sm electric-btn"
+                            onclick="openLightbox('/placeholder.svg?height=600&width=800', 'Site Inspection')">
+                            <i class="fas fa-expand-alt electric-glow"></i> View
+                        </button>
+                    </div>
+                    <div class="electric-border"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-5">
+            <button class="btn btn-outline-primary btn-lg electric-btn" onclick="loadMoreImages()">
+                <i class="fas fa-plus me-2 electric-glow"></i>Load More Images
+            </button>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content electric-card">
+                <div class="modal-header">
+                    <h5 class="modal-title electric-text" id="lightboxTitle">Image</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="lightboxImage" src="/placeholder.svg" alt="" class="img-fluid">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary electric-btn" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary electric-btn" onclick="downloadImage()">
+                        <i class="fas fa-download me-2 electric-glow"></i>Download
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button with Electric Effect -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/919919998802" target="_blank" class="whatsapp-btn electric-whatsapp">
+            <i class="fab fa-whatsapp"></i>
+            <div class="electric-ring"></div>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 position-relative">
+        <div class="electric-footer-bg"></div>
+        <div class="container position-relative z-index-2">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <div class="logo-container-footer">
+                            <img src="logo.png" alt="Shukla Enterprises Logo" class="footer-logo me-3 rotating-logo-footer" width="30">
+                            <div class="power-ring-footer"></div>
+                        </div>
+                        <p class="mb-0">&copy; 2025 Shukla Enterprises. All rights reserved.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3 electric-hover"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3 electric-hover"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3 electric-hover"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/919919998802" class="text-white electric-hover"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
