@@ -93,29 +93,29 @@ function openMap() {
   window.open("https://goo.gl/maps/YourLocationLink", "_blank")
 }
 
-// // Simple contact form submission
-// function handleContactForm(event) {
-//   event.preventDefault()
+// Simple contact form submission
+function handleContactForm(event) {
+  event.preventDefault()
 
-//   const form = event.target
-//   const formData = new FormData(form)
-//   const formObject = {}
+  const form = event.target
+  const formData = new FormData(form)
+  const formObject = {}
 
-//   formData.forEach((value, key) => {
-//     formObject[key] = value
-//   })
+  formData.forEach((value, key) => {
+    formObject[key] = value
+  })
 
-//   const submitBtn = form.querySelector('button[type="submit"]')
-//   submitBtn.innerHTML = '<i class="fas fa-check me-2"></i>Message Sent!'
+  const submitBtn = form.querySelector('button[type="submit"]')
+  submitBtn.innerHTML = '<i class="fas fa-check me-2"></i>Message Sent!'
 
-//   setTimeout(() => {
-//     alert("Thank you for contacting us! We will get back to you soon.")
-//     form.reset()
-//     submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message'
-//   }, 1000)
+  setTimeout(() => {
+    alert("Thank you for contacting us! We will get back to you soon.")
+    form.reset()
+    submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message'
+  }, 1000)
 
-//   console.log("Form data:", formObject)
-// }
+  console.log("Form data:", formObject)
+}
 
 // Simple login form submission
 function handleLogin(event) {
@@ -194,9 +194,7 @@ function initVendorRegistration() {
       console.log("Vendor Registered:", { name, company, email, phone, service })
       alert("Thank you for registering as a vendor!")
       form.reset()
-    } else {
-      alert("Please fill in all required fields.")
-    }
+    } 
   })
 }
 

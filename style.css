@@ -1,16 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 
 :root {
-  --primary-color: #13171b;
-  --secondary-color: #221203;
+  /* Updated colors based on the Shukla Enterprises logo */
+  --primary-color: #2d3e59; /* Navy blue from logo */
+  --secondary-color: #1a2433; /* Darker navy for contrast */
   --success-color: #198754;
   --warning-color: #f4b400;
   --danger-color: #dc3545;
   --light-color: #f9f9f9;
-  --dark-color: #000000;
-  --electric-blue: #00d4ff;
-  --electric-yellow: #ffff00;
-  --electric-purple: #8a2be2;
+  --dark-color: #1a2433; /* Darker navy */
+  --electric-orange: #f7941d; /* Orange from the logo sun */
+  --electric-amber: #ffa726; /* Lighter orange/amber for gradients */
+  --electric-gold: #ffb74d; /* Gold accent for highlights */
 }
 
 body {
@@ -31,21 +32,9 @@ body {
   transition: all 0.3s ease;
 }
 
-.power-ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 60px;
-  height: 60px;
-  border: 2px solid var(--electric-blue);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.7;
-}
-
 /* Text Effects */
 .electric-text {
-  background: linear-gradient(45deg, var(--primary-color), var(--electric-blue));
+  background: linear-gradient(45deg, var(--primary-color), var(--electric-orange));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -73,7 +62,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--electric-blue), var(--electric-yellow));
+  background: linear-gradient(90deg, var(--electric-orange), var(--electric-amber));
   transition: width 0.3s ease;
 }
 
@@ -82,14 +71,13 @@ body {
 }
 
 .electric-nav:hover {
-  color: var(--electric-blue) !important;
-  text-shadow: 0 0 5px var(--electric-blue);
+  color: var(--electric-orange) !important;
+  text-shadow: 0 0 5px var(--electric-orange);
 }
 
 /* Hero Section */
 .hero-section-photo {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
-   url('vender.jpg'); /* replace with your actual image path */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("vender.jpg"); /* replace with your actual image path */
   background-size: cover;
   background-position: center;
   min-height: 50vh;
@@ -112,8 +100,8 @@ body {
 }
 
 .electric-btn:hover {
-  box-shadow: 0 0 15px var(--electric-blue);
-  border-color: var(--electric-blue);
+  box-shadow: 0 0 15px var(--electric-orange);
+  border-color: var(--electric-orange);
   transform: translateY(-2px);
 }
 
@@ -127,8 +115,8 @@ body {
 
 .electric-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.2);
-  border-color: var(--electric-blue);
+  box-shadow: 0 10px 25px rgba(247, 148, 29, 0.2);
+  border-color: var(--electric-orange);
 }
 
 /* Icons */
@@ -141,30 +129,14 @@ body {
 }
 
 .electric-glow:hover {
-  color: var(--electric-blue);
-  text-shadow: 0 0 10px var(--electric-blue);
+  color: var(--electric-orange);
+  text-shadow: 0 0 10px var(--electric-orange);
 }
 
 /* Gallery */
 .electric-gallery {
   position: relative;
   overflow: hidden;
-}
-
-.electric-border {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 2px solid var(--electric-blue);
-  border-radius: 8px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.electric-gallery:hover .electric-border {
-  opacity: 1;
 }
 
 /* Stats Section */
@@ -176,20 +148,20 @@ body {
   height: 100%;
   background: linear-gradient(
     45deg,
-    rgba(0, 212, 255, 0.1) 0%,
-    rgba(138, 43, 226, 0.1) 50%,
-    rgba(255, 255, 0, 0.1) 100%
+    rgba(247, 148, 29, 0.1) 0%,
+    rgba(45, 62, 89, 0.1) 50%,
+    rgba(255, 183, 77, 0.1) 100%
   );
 }
 
 .electric-counter {
-  text-shadow: 0 0 10px var(--electric-blue);
+  text-shadow: 0 0 10px var(--electric-orange);
 }
 
 .electric-underline {
   width: 50px;
   height: 3px;
-  background: linear-gradient(90px, var(--electric-blue), var(--electric-yellow));
+  background: linear-gradient(90px, var(--electric-orange), var(--electric-amber));
   margin: 10px auto;
 }
 
@@ -197,7 +169,7 @@ body {
 .electric-form-card {
   border: 2px solid transparent;
   background: linear-gradient(white, white) padding-box,
-    linear-gradient(45deg, var(--electric-blue), var(--electric-purple)) border-box;
+    linear-gradient(45deg, var(--electric-orange), var(--primary-color)) border-box;
 }
 
 .electric-input {
@@ -206,8 +178,8 @@ body {
 }
 
 .electric-input:focus {
-  border-color: var(--electric-blue);
-  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  border-color: var(--electric-orange);
+  box-shadow: 0 0 10px rgba(247, 148, 29, 0.3);
   outline: none;
 }
 
@@ -218,29 +190,17 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, rgba(0, 212, 255, 0.05) 0%, rgba(138, 43, 226, 0.05) 100%);
+  background: linear-gradient(45deg, rgba(247, 148, 29, 0.05) 0%, rgba(45, 62, 89, 0.05) 100%);
 }
 
 .electric-hr {
-  border-color: var(--electric-blue);
-  box-shadow: 0 0 10px var(--electric-blue);
+  border-color: var(--electric-orange);
+  box-shadow: 0 0 10px var(--electric-orange);
 }
 
 /* WhatsApp */
 .electric-whatsapp {
   position: relative;
-}
-
-.electric-ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80px;
-  height: 80px;
-  border: 2px solid var(--electric-blue);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.7;
 }
 
 /* Hover Effects */
@@ -249,8 +209,8 @@ body {
 }
 
 .electric-hover:hover {
-  color: var(--electric-blue) !important;
-  text-shadow: 0 0 10px var(--electric-blue);
+  color: var(--electric-orange) !important;
+  text-shadow: 0 0 10px var(--electric-orange);
   transform: scale(1.05);
 }
 
@@ -264,14 +224,8 @@ body {
   .electric-title {
     font-size: 1.5rem;
   }
-
   .electric-card:hover {
     transform: translateY(-3px);
-  }
-
-  .power-ring {
-    width: 50px;
-    height: 50px;
   }
 }
 
@@ -279,7 +233,6 @@ body {
   .hero-section-photo h1 {
     font-size: 2rem;
   }
-
   .electric-letter {
     font-size: 1.8rem;
   }
@@ -418,8 +371,8 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
+  background-color: var(--electric-orange);
+  border-color: var(--electric-orange);
 }
 
 .btn-outline-primary {
@@ -442,18 +395,6 @@ body {
   transition: all 0.3s ease;
 }
 
-.power-ring-footer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  border: 1px solid var(--electric-blue);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.5;
-}
-
 /* Additional Electric Effects for New Pages */
 .electric-header-bg {
   position: absolute;
@@ -461,12 +402,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, rgba(0, 212, 255, 0.1), rgba(138, 43, 226, 0.1));
+  background: linear-gradient(45deg, rgba(247, 148, 29, 0.1), rgba(45, 62, 89, 0.1));
 }
 
 .electric-input-icon {
-  background: linear-gradient(45deg, var(--primary-color), var(--electric-blue));
-  border-color: var(--electric-blue);
+  background: linear-gradient(45deg, var(--primary-color), var(--electric-orange));
+  border-color: var(--electric-orange);
   color: white;
 }
 
@@ -476,8 +417,8 @@ body {
 }
 
 .electric-list-item:hover {
-  background: rgba(0, 212, 255, 0.05);
-  border-color: var(--electric-blue);
+  background: rgba(247, 148, 29, 0.05);
+  border-color: var(--electric-orange);
   transform: translateX(5px);
 }
 
@@ -491,38 +432,10 @@ body {
   transition: all 0.3s ease;
 }
 
-.electric-profile-ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 220px;
-  height: 220px;
-  border: 2px solid var(--electric-blue);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.6;
-}
-
 /* Electric Images */
 .electric-image {
   transition: all 0.3s ease;
   position: relative;
-}
-
-.electric-image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, transparent, rgba(0, 212, 255, 0.2), transparent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 8px;
-}
-
-.electric-image:hover .electric-image-overlay {
-  opacity: 1;
 }
 
 /* Electric Team Images */
@@ -535,21 +448,6 @@ body {
   transition: all 0.3s ease;
 }
 
-.electric-team-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, rgba(0, 212, 255, 0.1), rgba(138, 43, 226, 0.1));
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.team-image-container:hover .electric-team-overlay {
-  opacity: 1;
-}
-
 .team-image-container:hover .electric-team-image {
   transform: scale(1.05);
 }
@@ -559,39 +457,10 @@ body {
   position: relative;
 }
 
-.electric-map-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 2px solid var(--electric-blue);
-  border-radius: 8px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.electric-map:hover .electric-map-overlay {
-  opacity: 1;
-}
-
 /* Login Page Specific */
 .login-logo-container {
   position: relative;
   display: inline-block;
-}
-
-.power-ring-login {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100px;
-  height: 100px;
-  border: 2px solid var(--electric-blue);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.5;
 }
 
 /* Search Results */
@@ -603,7 +472,7 @@ body {
 
 .search-result-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.2);
+  box-shadow: 0 10px 25px rgba(247, 148, 29, 0.2);
 }
 
 /* Vendor Registration Form */
@@ -614,7 +483,7 @@ body {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   border: 2px solid transparent;
   background: linear-gradient(white, white) padding-box,
-    linear-gradient(45deg, var(--electric-blue), var(--electric-purple)) border-box;
+    linear-gradient(45deg, var(--electric-orange), var(--primary-color)) border-box;
 }
 
 /* Electric Subtitle */
@@ -624,20 +493,11 @@ body {
 
 /* Responsive Electric Effects */
 @media (max-width: 767.98px) {
-  .electric-profile-ring {
-    width: 180px;
-    height: 180px;
-  }
-
-  .power-ring-login {
-    width: 80px;
-    height: 80px;
-  }
-
   .electric-letter {
     font-size: 1.2rem;
   }
 }
+
 /* Improve container spacing and layout for mobile */
 @media (max-width: 767.98px) {
   .container,
@@ -645,41 +505,25 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-
   .hero-section-photo {
     padding: 2rem 0;
     min-height: 40vh;
   }
-
   .electric-btn {
     width: 100%;
     font-size: 1rem;
     padding: 0.75rem 1rem;
   }
-
   .electric-card {
     margin-bottom: 1.5rem;
   }
-
-  .electric-profile-ring {
-    width: 140px;
-    height: 140px;
-  }
-
-  .power-ring {
-    width: 40px;
-    height: 40px;
-  }
-
   .whatsapp-float {
     bottom: 20px;
     right: 20px;
   }
-
   .navbar-nav {
     text-align: center;
   }
-
   .electric-title {
     font-size: 1.25rem;
   }
@@ -690,30 +534,24 @@ body {
   .hero-section-photo h1 {
     font-size: 1.5rem;
   }
-
   .hero-section-photo p {
     font-size: 1rem;
   }
-
   .electric-letter {
     font-size: 1rem;
   }
-
   .electric-subtitle {
     font-size: 0.9rem;
   }
-
   .gallery-card,
   .gallery-preview-card {
     aspect-ratio: 1 / 1;
   }
-
   .service-icon,
   .why-choose-icon {
     width: 50px;
     height: 50px;
   }
-
   .form-container {
     padding: 1rem;
   }
